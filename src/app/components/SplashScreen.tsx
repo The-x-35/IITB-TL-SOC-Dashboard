@@ -17,21 +17,21 @@ const SplashScreen: React.FC<{ onSplashEnd: () => void }> = ({ onSplashEnd }) =>
 
   return (
     <div
-      className={`flex flex-col justify-center items-center h-screen bg-white transition-all duration-1000 ${fadeOut ? 'opacity-0' : 'opacity-100'}`}
+      className={`flex flex-col justify-center items-center h-screen w-screen bg-white transition-all duration-1000 ${fadeOut ? 'opacity-0' : 'opacity-100'}`}
     >
       <Image
         src={tl}
         width={150}
         height={150}
         alt="Trust Lab Logo"
-        className={`animate-zoom-in ${fadeOut ? 'scale-100' : 'scale-50'}`}
+        className={`mr-2 animate-zoom-in ${fadeOut ? 'scale-100' : 'scale-50'}`}
       />
       <Image
         src={tl_full}
-        width={500}
-        height={500}
+        width={600}
+        height={600}
         alt="Trust Lab Logo"
-        className={`-m-20 animate-zoom-in ${fadeOut ? 'scale-100' : 'scale-50'}`}
+        className={`-my-20 animate-zoom-in ${fadeOut ? 'scale-100' : 'scale-50'}`}
       />
       <h1 className={`text-2xl text-center text-black animate-zoom-in ${fadeOut ? 'scale-100' : 'scale-50'} font-bold`}>
         Security Operations Center

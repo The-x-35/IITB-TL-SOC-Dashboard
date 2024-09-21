@@ -14,15 +14,15 @@ const Navbar: React.FC = () => {
 
   return (
     <div>
-      <nav className="flex items-center justify-between bg-gray-800 text-white p-4">
+      <nav className="fixed top-0 left-0 w-full h-28 bg-black text-white p-4 flex items-center justify-between z-50">
         <div className="flex items-center justify-center w-16">
-            <Image
+          <Image
             src={tl}
             width={80}
             height={80}
             alt="Trust Lab Logo"
             className={`animate-zoom-in`}
-           />
+          />
         </div>
 
         <div className="flex flex-col items-center justify-center">
@@ -32,16 +32,17 @@ const Navbar: React.FC = () => {
             height={500}
             alt="Trust Lab Logo"
             className={`-m-20`}
-           />
+          />
           <span className="text-2xl mt-5 font-bold">Security Operations Center</span>
         </div>
-        <div className='flex items-center justify-center w-16'>
-            <button
+        
+        <div className="flex items-center justify-center w-16">
+          <button
             onClick={toggleSidebar}
             className="flex items-center justify-center w-10 h-10 bg-white rounded-full"
-            >
+          >
             <Image src={menuIcon} width={25} height={25} alt="Menu Icon" />
-            </button>
+          </button>
         </div>
       </nav>
 
@@ -49,7 +50,7 @@ const Navbar: React.FC = () => {
 
       {isSidebarOpen && (
         <div
-          className="fixed inset-0 bg-black opacity-50"
+          className="fixed inset-0 bg-black opacity-50 z-40"
           onClick={toggleSidebar}
         ></div>
       )}

@@ -2,6 +2,7 @@
 import { useState } from "react";
 import SplashScreen from "./components/SplashScreen";
 import Navbar from "./components/Navbar";
+import MainPage from "./components/MainPage";
 
 export default function Home() {
   const [showSplash, setShowSplash] = useState(true);
@@ -11,10 +12,10 @@ export default function Home() {
         <SplashScreen onSplashEnd={() => setShowSplash(false)} />
       ) : (
         <>
-        <Navbar />
-        <div className="flex justify-center items-center h-screen bg-white">
-          <h1 className="text-3xl">Main Page Content Here</h1>
-        </div>
+          <Navbar />
+          <div className="pt-28 flex justify-center items-start bg-white overflow-auto h-screen">
+            <MainPage />
+          </div>
         </>
       )}
     </>
