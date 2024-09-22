@@ -1,15 +1,28 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import SplashScreen from "./components/SplashScreen";
 import Navbar from "./components/Navbar";
 import MainPage from "./components/MainPage";
 
 export default function Home() {
   const [showSplash, setShowSplash] = useState(true);
+
+  useEffect(() => {
+    const splashShown = localStorage.getItem("splashShown");
+    if (splashShown) {
+      setShowSplash(false);
+    }
+  }, []);
+
+  const handleSplashEnd = () => {
+    localStorage.setItem("splashShown", "true");
+    setShowSplash(false);
+  };
+
   return (
     <>
       {showSplash ? (
-        <SplashScreen onSplashEnd={() => setShowSplash(false)} />
+        <SplashScreen onSplashEnd={handleSplashEnd} />
       ) : (
         <>
           <Navbar />
