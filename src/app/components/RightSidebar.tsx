@@ -9,7 +9,7 @@ interface RightSidebarProps {
 const RightSidebar: React.FC<RightSidebarProps> = ({ isOpen, onClose }) => {
   return (
     <div
-      className={`fixed top-0 right-0 h-full w-64 bg-gray-800 text-white shadow-lg transition-transform transform ${
+      className={`z-20 fixed top-0 right-0 h-full w-64 bg-gray-800 text-white shadow-lg transition-transform transform ${
         isOpen ? 'translate-x-0' : 'translate-x-full'
       }`}
     >

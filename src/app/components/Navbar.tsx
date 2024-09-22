@@ -15,7 +15,7 @@ const Navbar: React.FC = () => {
 
   return (
     <div>
-      <nav className="fixed top-0 left-0 w-full h-28 bg-black text-white p-4 flex items-center justify-between">
+      <nav className="fixed top-0 left-0 w-full h-28 bg-black text-white p-4 flex items-center justify-between z-10">
         <div className="flex items-center justify-center w-16">
           <Image
             src={tl}
